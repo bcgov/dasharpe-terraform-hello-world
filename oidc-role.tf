@@ -19,7 +19,7 @@ resource "aws_iam_role" "github_actions_hello_world" {
             "token.actions.githubusercontent.com:aud" = "sts.amazonaws.com"
           }
           StringLike = {
-            "token.actions.githubusercontent.com:sub" = "repo:bcgov/dasharpe-terraform-hello-world:*"
+            "token.actions.githubusercontent.com:sub" = "repo:bcgov@916280/dasharpe-terraform-hello-world@1398856883:*"
           }
         }
       }
