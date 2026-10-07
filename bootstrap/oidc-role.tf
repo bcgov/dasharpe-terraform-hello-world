@@ -51,7 +51,10 @@ resource "aws_iam_role_policy" "github_actions_s3_backend" {
           "s3:PutObject",
           "s3:DeleteObject",
         ]
-        Resource = "arn:aws:s3:::tfstate-918084097805-ca-central-1/hello-world/*"
+        Resource = [
+          "arn:aws:s3:::tfstate-918084097805-ca-central-1/hello-world/*",
+          "arn:aws:s3:::tfstate-918084097805-ca-central-1/keycloak-dev/*",
+        ]
       }
     ]
   })
