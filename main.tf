@@ -10,15 +10,13 @@ terraform {
     bucket       = "tfstate-918084097805-ca-central-1"
     key          = "hello-world/terraform.tfstate"
     region       = "ca-central-1"
-    profile      = "bcgov-tools"
     encrypt      = true
     use_lockfile = true
   }
 }
 
 provider "aws" {
-  region  = "ca-central-1"
-  profile = "bcgov-tools"
+  region = "ca-central-1"
 
   default_tags {
     tags = {
